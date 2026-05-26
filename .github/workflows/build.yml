@@ -6,6 +6,9 @@
 name: build
 on: [pull_request, push]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -28,3 +31,12 @@ jobs:
         with:
           name: Artifacts
           path: build/libs/
+      - name: update latest release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Build
+          files: build/libs/*.jar
+          prerelease: true
+          make_latest: false
