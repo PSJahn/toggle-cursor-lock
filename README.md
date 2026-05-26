@@ -5,4 +5,4 @@ Versions tested are 1.21.11 - 26.1.1, but version above/below may work regardles
 
 ## Downloading
 
-You can download the mod by getting the latest built artifact from github actions, or at [this link](https://nightly.link/PSJahn/toggle-cursor-lock/workflows/build/master/Artifacts.zip)
+You can download the mod by getting the latest built artifact from github actions, or the [latest release](https://github.com/PSJahn/toggle-cursor-lock/releases/tag/latest)
