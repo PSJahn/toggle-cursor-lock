@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "toggle-cursor-lock",
+	"version": "${version}",
+	"name": "toggle-cursor-lock",
+	"description": "Simple mod with which you can lock and unlock the cursor at will",
+	"authors": [ "PSJahn" ],
+	"contact": {
+		"github": "https://github.com/psjahn/toggle-cursor-lock",
+		"discord": "PSJahn"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/toggle-cursor-lock/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"de.psjahn.tcl.ToggleCursorLock"
+		],
+		"fabric-datagen": [
+			"de.psjahn.tcl.datagen.ToggleCursorLockDataGenerator"
+		]
+	},
+	"mixins": [
+		"toggle-cursor-lock.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.13.2",
+		"minecraft": ">1.21.11",
+		"fabric-api": "*"
+	}
+}
