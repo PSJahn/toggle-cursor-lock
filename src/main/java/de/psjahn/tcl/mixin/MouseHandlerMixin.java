@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MouseHandler.class)
 public class MouseHandlerMixin {
-    @Inject(method = "grabMouse", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "grabMouse", at = @At("HEAD"))
     private void injectGrabMouse(CallbackInfo ci) {
-        if(ToggleCursorLock.CURSOR_UNLOCKED) ci.cancel();
+        ToggleCursorLock.CURSOR_UNLOCKED = false;
     }
 }
